@@ -3,18 +3,30 @@ package main
 import "fmt"
 
 func main() {
-	createInstance()
+
+	p1 := fp{
+		11,
+		"sadcxc",
+	}
+	p2 := struct {
+		age  int8
+		name string
+	}{11,
+		"sadcxc"}
+	fmt.Println(p1 == p2)
 }
 func createAnonymStruct() {
-	var person struct {
+	//Define and setup
+	pet := struct {
 		name string
-		age  int
-		pet  string
+		age  int64
+	}{
+		"Oleg",
+		22,
 	}
-	person.name = "bob"
-	person.pet = "pet boba"
-	person.age = 12
-} // WHAAAAAT
+	// Good for murshaling/unmarshaling
+	fmt.Println(pet)
+}
 
 func createInstance() {
 	julia := person{
@@ -37,5 +49,7 @@ type person struct {
 	age  int
 	pet  string
 }
-
-// typ
+type fp struct {
+	age  int8
+	name string
+}
