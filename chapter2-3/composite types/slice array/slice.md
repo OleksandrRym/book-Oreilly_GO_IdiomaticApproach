@@ -57,3 +57,4 @@ fmt.Println("y: ", y, "num: ", num)
 // y:  [1 2 3 4] num:  4
 
 ```
+When a slice is copied or passed to a function, Go creates a new slice header (pointer, length, capacity), but the underlying array is NOT copied. Both slices refer to the same underlying memory.

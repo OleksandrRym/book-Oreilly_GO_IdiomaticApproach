@@ -21,3 +21,5 @@ return nil
 }
 
 ```
+map = pointer to struct
+pointer - stored in stack
